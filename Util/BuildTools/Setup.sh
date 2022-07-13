@@ -554,7 +554,7 @@ fi
 SQLITE_VERSION=sqlite-autoconf-3340100
 SQLITE_REPO=https://www.sqlite.org/2021/${SQLITE_VERSION}.tar.gz
 
-SQLITE_TAR=${SQLITE_VERSION}.tar.gz
+SQLITE_TAR=${SQLITE_VERSION}.tar.gz?dl=0
 SQLITE_SOURCE_DIR=sqlite-src
 SQLITE_INSTALL_DIR=sqlite-install
 
@@ -566,7 +566,7 @@ if [[ -d ${SQLITE_INSTALL_DIR} ]] ; then
   log "Sqlite already installed."
 else
   log "Retrieving Sqlite3"
-  wget ${SQLITE_REPO}
+  wget https://www.dropbox.com/s/doxcw7etdpqneuh/sqlite-autoconf-3340100.tar.gz?dl=0
 
   log "Extracting Sqlite3"
   tar -xzf ${SQLITE_TAR}
